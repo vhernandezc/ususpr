@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listar Usuarios</title>
+        <link rel="stylesheet" type="text/css" href="static/css/main.css" th:href="@{/css/main.css}">
+    </head>
+    <body>
+        <div class="contene">
+            <h1>LISTAR USUARIO</h1>
+            <div th:if="${usuarios != null and !usuarios.empty}">
+                <div class="botones">
+                <table border="1" class="tablita">
+                    
+                    <tr>
+                        <div class="encabezado">
+                        <!--<th>ID_USUARIO</th>-->
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Departamento</th>
+                        <th>Profesion</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Fecha nacimiento</th>
+                        <th>Longitud</th>
+                        <th>Latitud</th>
+                        <th>Fecha registro</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                                            </div>
+
+                    </tr>
+                    <tr th:each="usuario : ${usuarios}">
+                        <!--<td th:text="${usuario.ID_USUARIO}"></td>-->
+                        <td th:text="${usuario.NOMBRE}"></td>
+                        <td th:text="${usuario.APELLIDO}"></td>
+                        <td th:text="${departamentos.get(usuario.ID_DEPTO)}"></td>
+                        <td th:text="${profesiones.get(usuario.ID_PROFESION)}"></td>
+                        <td th:text="${usuario.CORREO_ELECTRONICO}"></td>
+                        <td th:text="${usuario.TELEFONO}"></td>
+                        <td th:text="${usuario.FECHA_NACIMIENTO}"></td>
+                        <td th:text="${usuario.LONGITUD}"></td>
+                        <td th:text="${usuario.LATITUD}"></td>
+                        <td th:text="${usuario.FECHA_REGISTRO}"></td>
+                        <td><a th:href="@{/editarUsuario/} + ${usuario.ID_USUARIO}" th:text="Editar"/></td>
+                        <td><a th:href="@{/eliminarUsuario/} + ${usuario.ID_USUARIO}" th:text="Eliminar"/></td>
+                    </tr>
+                </table>
+                   
+                <br/>
+                <br/>
+            </div>
+ </div>
+            <div th:if ="${usuarios == null or usuarios.empty}">
+                no hay cuates.
+            </div>
+             <div class="botones">
+            <a  href="http://www.localhost:8080/usuario"><input type="button" value="REGRESAR"></a>
+        </div>
+             </div>
+    </body>
+</html>

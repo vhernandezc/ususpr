@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2/11/2021, 14:36:39
+    Author     : jeant
+*/
+:root {
+    --primary: #cd853f; /*variables rgb(62, 202, 202);*/
+    --secondary: #deb887;
+}
+
+* {
+    background-color: var(--secondary);
+    text-align: center;
+    
+}
+
+.contenedor {
+    margin-top: 2rem;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+.contene {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    max-width: 1030px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.conteni {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.botones{
+    background-color: var(--primary);
+}
+
+.encabezado{
+     background-color: #a0522d;
+}
+  label, caption, p,input, button, caption {
+    background-color: #f4a460;
+        text-align: center;
+}
+h1 {
+  background-color: var(--primary)  ;
+      text-align: center;
+}
+
+input, button, caption {
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    font-size: large;
+    text-align: center;
+}
+
+table{
+    text-align: center;
+    margin:auto;
+    max-width: 400px
+}
+
+.tablita {
+    text-align: center;
+    border-radius: 5px;
+    background-color: black;
+    
+}
+.tablitadatos{
+    text-align: center;
+    border-radius: 5px;
+    border:none;
+    background-color: var(--secondary);
+}
+.divdetablita{
+    margin:auto;
+    max-width: 400px;
+}
+
+

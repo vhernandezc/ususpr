@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agregar Profesion</title>
+        <link rel="stylesheet" type="text/css" href="static/css/main.css" th:href="@{/css/main.css}">
+    </head>
+    <body>
+        <div class="contenedor">
+            <h1>Datos de Profesion</h1>
+            <form th:action="@{/guardarProfesion}" method="post" th:object="${profesion}">
+                <div class="botones"> 
+                <br/>
+                <input type="hidden" name="ID_PROFESION" th:field="*{ID_PROFESION}"/>
+                <label for="DESCRIPCION_PROFESION">DESCRIPCION: </label>
+                <input type="text" name="DESCRIPCION_PROFESION" th:field="*{DESCRIPCION_PROFESION}"/>
+                <small th:if="${#fields.hasErrors('DESCRIPCION_PROFESION')}" th:errors="*{DESCRIPCION_PROFESION}"></small>
+                <br/>
+                <input type="submit" name="guardarProfesion" value="Guardar"/>
+            </div>
+            </form>
+             <div class="botones"> 
+        <a href="http://www.localhost:8080/profesion"><input type="button" value="REGRESAR"></a>
+        </div>
+            </div>
+    </body>
+</html>
